@@ -8,7 +8,7 @@ import type {
 export class ScrapegraphAIApi implements ICredentialType {
 	name = 'scrapegraphAIApi';
 	displayName = 'ScrapegraphAI API';
-	documentationUrl = 'https://scrapegraphai.com/docs';
+	documentationUrl = 'https://www.scrapegraph.ai/docs';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',
@@ -26,19 +26,26 @@ export class ScrapegraphAIApi implements ICredentialType {
 		type: 'generic',
 		properties: {
 			headers: {
-				'SGAI-APIKEY': '={{$credentials.apiKey}}',
+				'X-API-Key': '={{$credentials.apiKey}}',
 			},
 		},
 	};
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://api.scrapegraphai.com/v1',
+			baseURL: 'https://api.scrapegraph.ai',
 			url: '/markdownify',
 			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'X-API-Key': '={{$credentials.apiKey}}',
+				'User-Agent': 'n8n',
+			},
 			body: {
-				website_url: 'https://example.com',
+				website_url: 'https://scrapegraph.ai',
 			},
 		},
 	};
-} 
+}
+
+export default ScrapegraphAIApi; 

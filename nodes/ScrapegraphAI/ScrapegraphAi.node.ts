@@ -6,15 +6,15 @@ import type {
 	NodeConnectionType,
 } from 'n8n-workflow';
 
-import { smartscraperFields, smartscraperOperations } from './SmartscraperDescription';
-import { searchscraperFields, searchscraperOperations } from './SearchscraperDescription';
-import { markdownifyFields, markdownifyOperations } from './MarkdownifyDescription';
+import { smartscraperFields, smartscraperOperations } from '../SmartscraperDescription';
+import { searchscraperFields, searchscraperOperations } from '../SearchscraperDescription';
+import { markdownifyFields, markdownifyOperations } from '../MarkdownifyDescription';
 
-export class ScrapegraphAI implements INodeType {
+export class ScrapegraphAi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'ScrapegraphAI',
-		name: 'scrapegraphAI',
-		icon: 'file:scrapegraphAI.svg',
+		name: 'scrapegraphAi',
+		icon: 'file:../scrapegraphAI.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
