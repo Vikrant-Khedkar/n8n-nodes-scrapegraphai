@@ -33,17 +33,14 @@ export class ScrapegraphAIApi implements ICredentialType {
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://api.scrapegraph.ai',
-			url: '/markdownify',
-			method: 'POST',
+			baseURL: 'https://api.scrapegraphai.com/v1',
+			url: '/validate',
+			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json',
-				'X-API-Key': '={{$credentials.apiKey}}',
+				'SGAI-APIKEY': '={{$credentials.apiKey}}',
 				'User-Agent': 'n8n',
-			},
-			body: {
-				website_url: 'https://scrapegraph.ai',
-			},
+			}
 		},
 	};
 }
