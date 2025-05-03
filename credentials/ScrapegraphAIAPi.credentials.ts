@@ -8,7 +8,7 @@ import type {
 export class ScrapegraphAIApi implements ICredentialType {
 	name = 'scrapegraphAIApi';
 	displayName = 'ScrapegraphAI API';
-	documentationUrl = 'https://www.scrapegraph.ai/docs';
+	documentationUrl = 'https://docs.scrapegraphai.com/';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',
