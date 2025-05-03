@@ -28,7 +28,10 @@ This node provides several operations to interact with the ScrapegraphAI API:
 
 ## Credentials
 
-To use this node, you need a ScrapegraphAI API key. You can get one by signing up at [scrapegraphai.com](https://scrapegraphai.com).
+To use this node, you need a ScrapegraphAI API key. You can get one by signing up at [scrapegraphai.com](https://scrapegraphai.com) and visiting your [dashboard](https://dashboard.scrapegraphai.com/dashboard).
+
+<img width="1360" alt="image" src="https://github.com/user-attachments/assets/c4305f4d-a7bd-445a-a495-a1e0314b4f46" />
+
 
 ## Usage
 
