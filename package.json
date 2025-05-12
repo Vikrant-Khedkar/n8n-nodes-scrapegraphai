@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-scrapegraphai",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "n8n node for ScrapegraphAI web scraping and data extraction",
   "keywords": [
     "n8n-community-node-package"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vikrant-Khedkar/n8n-nasa"
+    "url": "https://github.com/Vikrant-Khedkar/n8n-nodes-scrapegraphai"
   },
   "engines": {
     "node": ">=18.10",
