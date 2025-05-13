@@ -67,7 +67,6 @@ export class ScrapegraphAi implements INodeType {
 		const resource = this.getNodeParameter('resource', 0) as string;
 		const operation = this.getNodeParameter('operation', 0) as string;
 		
-		const credentials = await this.getCredentials('scrapegraphAIApi');
 		const baseUrl = 'https://api.scrapegraphai.com/v1';
 		
 		for (let i = 0; i < items.length; i++) {
@@ -77,12 +76,11 @@ export class ScrapegraphAi implements INodeType {
 						const websiteUrl = this.getNodeParameter('websiteUrl', i) as string;
 						const userPrompt = this.getNodeParameter('userPrompt', i) as string;
 
-						const response = await this.helpers.request({
+						const response = await this.helpers.httpRequestWithAuthentication.call(this, 'scrapegraphAIApi', {
 							method: 'POST',
 							url: `${baseUrl}/smartscraper`,
 							headers: {
-								'accept': 'application/json',
-								'SGAI-APIKEY': credentials.apiKey,
+								'Accept': 'application/json',
 								'Content-Type': 'application/json',
 							},
 							body: {
@@ -92,7 +90,7 @@ export class ScrapegraphAi implements INodeType {
 							json: true,
 						});
 
-						returnData.push({ json: response });
+						returnData.push({ json: response, pairedItem: { item: i } });
 					}
 				}
 
@@ -100,12 +98,11 @@ export class ScrapegraphAi implements INodeType {
 					if (operation === 'search') {
 						const userPrompt = this.getNodeParameter('userPrompt', i) as string;
 
-						const response = await this.helpers.request({
+						const response = await this.helpers.httpRequestWithAuthentication.call(this, 'scrapegraphAIApi', {
 							method: 'POST',
 							url: `${baseUrl}/searchscraper`,
 							headers: {
-								'accept': 'application/json',
-								'SGAI-APIKEY': credentials.apiKey,
+								'Accept': 'application/json',
 								'Content-Type': 'application/json',
 							},
 							body: {
@@ -114,7 +111,7 @@ export class ScrapegraphAi implements INodeType {
 							json: true,
 						});
 
-						returnData.push({ json: response });
+						returnData.push({ json: response, pairedItem: { item: i } });
 					}
 				}
 
@@ -122,12 +119,11 @@ export class ScrapegraphAi implements INodeType {
 					if (operation === 'convert') {
 						const websiteUrl = this.getNodeParameter('websiteUrl', i) as string;
 
-						const response = await this.helpers.request({
+						const response = await this.helpers.httpRequestWithAuthentication.call(this, 'scrapegraphAIApi', {
 							method: 'POST',
 							url: `${baseUrl}/markdownify`,
 							headers: {
-								'accept': 'application/json',
-								'SGAI-APIKEY': credentials.apiKey,
+								'Accept': 'application/json',
 								'Content-Type': 'application/json',
 							},
 							body: {
@@ -136,7 +132,7 @@ export class ScrapegraphAi implements INodeType {
 							json: true,
 						});
 
-						returnData.push({ json: response });
+						returnData.push({ json: response, pairedItem: { item: i } });
 					}
 				}
 			} catch (error) {
