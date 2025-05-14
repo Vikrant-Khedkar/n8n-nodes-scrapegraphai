@@ -26,7 +26,7 @@ export class ScrapegraphAIApi implements ICredentialType {
 		type: 'generic',
 		properties: {
 			headers: {
-				'X-API-Key': '={{$credentials.apiKey}}',
+				'SGAI-APIKEY': '={{$credentials.apiKey}}',
 			},
 		},
 	};
