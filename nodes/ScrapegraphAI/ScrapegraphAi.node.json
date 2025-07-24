@@ -6,7 +6,7 @@
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": "https://docs.n8n.io/integrations/builtin/credentials/scrapegraphai/"
+				"url": "https://www.npmjs.com/package/n8n-nodes-scrapegraphai"
 			}
 		],
 		"primaryDocumentation": [
