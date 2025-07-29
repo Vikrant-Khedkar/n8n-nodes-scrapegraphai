@@ -15,7 +15,7 @@ export const searchscraperOperations: INodeProperties[] = [
 			{
 				name: 'Search',
 				value: 'search',
-				action: 'Search & Extract Content with AI',
+				action: 'Search & extract content with AI',
 			},
 		],
 		default: 'search',
