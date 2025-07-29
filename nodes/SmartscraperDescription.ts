@@ -15,7 +15,7 @@ export const smartscraperOperations: INodeProperties[] = [
 			{
 				name: 'Scrape',
 				value: 'scrape',
-				action: 'Scrape website content using AI',
+				action: 'Extract and Scrape Website Data with AI',
 			},
 		],
 		default: 'scrape',
