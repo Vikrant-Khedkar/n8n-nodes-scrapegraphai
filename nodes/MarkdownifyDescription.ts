@@ -15,7 +15,7 @@ export const markdownifyOperations: INodeProperties[] = [
 			{
 				name: 'Convert',
 				value: 'convert',
-				action: 'Convert webpage to markdown',
+				action: 'Convert to Markdown with AI',
 			},
 		],
 		default: 'convert',
