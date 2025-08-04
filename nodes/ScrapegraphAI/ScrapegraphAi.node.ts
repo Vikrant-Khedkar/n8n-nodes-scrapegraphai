@@ -19,7 +19,7 @@ export class ScrapegraphAi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Consume ScrapegraphAI API',
+		description: 'Turn any webpage into usable data in one shot – ScrapegraphAI explores the website and extracts the content you need.',
 		defaults: {
 			name: 'ScrapegraphAI',
 		},
