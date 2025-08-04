@@ -15,7 +15,7 @@ export const smartcrawlerOperations: INodeProperties[] = [
 			{
 				name: 'Crawl',
 				value: 'crawl',
-				action: 'Crawl website with AI-powered content extraction',
+				action: 'Give it a single URL – the AI crawler will follow every internal link, going deep into the site to extract structured data across multiple pages.',
 			},
 		],
 		default: 'crawl',
