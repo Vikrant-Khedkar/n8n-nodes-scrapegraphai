@@ -17,12 +17,31 @@ export const smartcrawlerOperations: INodeProperties[] = [
 				value: 'crawl',
 				action: 'Give it a single URL – the AI crawler will follow every internal link, going deep into the site to extract structured data across multiple pages.',
 			},
+			{
+				name: 'Get Status',
+				value: 'getStatus',
+				action: 'Get the status and results of a crawl job using its task ID.',
+			},
 		],
 		default: 'crawl',
 	},
 ];
 
 export const smartcrawlerFields: INodeProperties[] = [
+	{
+		displayName: 'Task ID',
+		name: 'taskId',
+		type: 'string',
+		required: true,
+		default: '',
+		description: 'The task ID returned from a crawl operation',
+		displayOptions: {
+			show: {
+				resource: ['smartcrawler'],
+				operation: ['getStatus'],
+			},
+		},
+	},
 	{
 		displayName: 'URL',
 		name: 'url',

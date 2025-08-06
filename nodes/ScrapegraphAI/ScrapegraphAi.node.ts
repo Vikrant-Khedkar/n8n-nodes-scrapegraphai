@@ -151,6 +151,21 @@ export class ScrapegraphAi implements INodeType {
 
 						returnData.push({ json: response, pairedItem: { item: i } });
 					}
+
+					if (operation === 'getStatus') {
+						const taskId = this.getNodeParameter('taskId', i) as string;
+
+						const response = await this.helpers.httpRequestWithAuthentication.call(this, 'scrapegraphAIApi', {
+							method: 'GET',
+							url: `${baseUrl}/crawl/${taskId}`,
+							headers: {
+								'Accept': 'application/json',
+							},
+							json: true,
+						});
+
+						returnData.push({ json: response, pairedItem: { item: i } });
+					}
 				}
 
 				if (resource === 'markdownify') {
