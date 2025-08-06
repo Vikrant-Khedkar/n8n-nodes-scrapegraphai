@@ -1,19 +1,26 @@
 {
   "name": "n8n-nodes-scrapegraphai",
-  "version": "0.1.12",
+  "version": "0.1.14",
   "description": "n8n node for ScrapegraphAI web scraping and data extraction",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/ScrapeGraphAI/n8n-nodes-scrapegraphai#readme",
   "author": {
     "name": "vikrant",
     "email": "vikrantkhedkar2002@gmail.com"
   },
+  "contributors": [
+    {
+      "name": "ScrapeGraphAI",
+      "email": "contact@scrapegraphai.com",
+      "url": "https://scrapegraphai.com"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vikrant-Khedkar/n8n-nodes-scrapegraphai"
+    "url": "https://github.com/ScrapeGraphAI/n8n-nodes-scrapegraphai"
   },
   "engines": {
     "node": ">=18.10",
